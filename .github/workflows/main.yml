@@ -16,6 +16,8 @@ jobs:
         with:
           repository: y-fujii77/sandbox
       - run: ls -l
+      - run: chmod +x hello.sh
+      - run: ./hello.sh
 #       - run: echo "hello, actions"
 # # This is a basic workflow to help you get started with Actions
 
