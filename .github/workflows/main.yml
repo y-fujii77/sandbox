@@ -11,16 +11,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 #       - uses: actions/checkout@feature/edit_new_github_actions_20200701
-      - run: echo "hello, actions"
-
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          repository: y-fujii77/sandbox
+      - run: ./hello.sh
+#       - run: echo "hello, actions"
 # # This is a basic workflow to help you get started with Actions
 
-# name: CI
+# name: Hello github actions
+
+      - run: echo "hello, actions"
+
+
 
 # # Controls when the action will run. Triggers the workflow on push or pull request
 # # events but only for the master branch
 # on:
 #   push:
+#     branches:
+#     - develop
 #     branches: [ develop ]
 #   #pull_request:
 #   #  branches: [ master ]
@@ -36,9 +46,6 @@ jobs:
 #     steps:
 #     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 #     - uses: actions/checkout@v2
-
-
-
 
 #     # Runs a set of commands using the runners shell
 #     - name: Run a multi-line script
