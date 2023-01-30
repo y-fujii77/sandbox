@@ -1,6 +1,9 @@
 name: Test build Actions
 
 on:
+  workflow_dispatch:
+    branches:
+    - master
   push:
     branches:
     - master
@@ -16,13 +19,13 @@ jobs:
         with:
           repository: y-fujii77/sandbox
           -run: ls -l 
-      - run: echo "hello, actions"
+      - run: echo "hello, workflow_dispatch"
 #       - run: ./hello.sh
 # # This is a basic workflow to help you get started with Actions
 
 # name: Hello github actions
 
-      - run: echo "hello, actions"
+      - run: echo "hello, workflow_dispatch"
 
 
 
